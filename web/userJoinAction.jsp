@@ -4,16 +4,16 @@
 <%@ page import="java.io.PrintWriter" %>
 <%
     request.setCharacterEncoding("UTF-8");
-    String userID=null;
+    String userId=null;
     String userPassword=null;
-    if(request.getParameter("userID")!=null){
-        userID=(String) request.getParameter("userID");
-        System.out.println(userID);
+    if(request.getParameter("userId")!=null){
+        userId=(String) request.getParameter("userId");
+        System.out.println(userId);
     }
     if(request.getParameter("userPassword")!=null){
         userPassword=(String) request.getParameter("userPassword");
     }
-    if(userID==null || userPassword==null){
+    if(userId==null || userPassword==null){
         PrintWriter script=response.getWriter();
         script.println("<script>");
         script.println("alert('입력이 안 된 사항이 있습니다.');");
@@ -23,5 +23,14 @@
         return;
     }
     UserDAO userDAO = new UserDAO();
-    int result = userDAO.join(userID,userPassword);
+    int result = userDAO.join(userId, userPassword);
+    if(result==1){
+        PrintWriter script=response.getWriter();
+        script.println("<script>");
+        script.println("alert('회원가입에 성공했습니다.');");
+        script.println("location.href='./index.jsp'");
+        script.println("</script>");
+        script.close();
+        return;
+    }
 %>

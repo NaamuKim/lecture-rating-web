@@ -1,15 +1,15 @@
 package user;
 
 public class UserDTO {
-    String userID;
+    String userId;
     String userPassword;
 
     public String getUserId() {
-        return userID;
+        return userId;
     }
 
-    public void setUserId(String userID) {
-        this.userID = userID;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUserPassword() {
