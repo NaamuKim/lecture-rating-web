@@ -84,7 +84,7 @@ public class UserDAO {
     }
 
     public boolean getUserEmailChecked(String userId) {
-        String SQL = "INSERT userEmailChecked From USER WHERE userId = ?";
+        String SQL = "SELECT userEmailChecked FROM USER WHERE userId = ?";
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -119,7 +119,7 @@ public class UserDAO {
     }
 
     public String getUserEmail(String userId){
-        String SQL = "INSERT userEmail From USER WHERE userId = ?";
+        String SQL = "SELECT userEmail From USER WHERE userId = ?";
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;

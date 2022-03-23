@@ -23,7 +23,7 @@
     </button>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item-active">
+        <li class="nav-item">
           <a class="nav-link" href="index.jsp">메인</a>
         </li>
         <li class="nav-item dropdown">
@@ -32,7 +32,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdown">
             <a class="dropdown-item" href="userLogin.jsp">로그인</a>
-            <a class="dropdown-item" href="userJoin.jsp">회원가입</a>
+            <a class="dropdown-item active" href="userJoin.jsp">회원가입</a>
             <a class="dropdown-item" href="userLogout.jsp">로그아웃</a>
           </div>
         </li>
@@ -55,9 +55,9 @@
       </div>
       <div class="form-group">
         <label>이메일</label>
-        <input type="password" name="userEmail" class="form-control">
+        <input type="text" name="userEmail" class="form-control">
       </div>
-      <button type="submit" class="btn btn-primary">로그인</button>
+      <button type="submit" class="btn btn-primary">회원가입</button>
     </form>
   </section>
 
