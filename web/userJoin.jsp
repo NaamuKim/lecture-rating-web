@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jiwonkim
-  Date: 2022/03/17
-  Time: 10:33 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -16,6 +10,21 @@
   <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
+<%
+  String userId=null;
+  if(session.getAttribute("userId")!=null){
+    userId= (String) session.getAttribute("userId");
+  }
+  if(session.getAttribute("userId")!=null){
+    PrintWriter script = response.getWriter();
+    script.println("<script>");
+    script.println("alert('이미 로그인 중입니다..');");
+    script.println("location.href='index.jsp'");
+    script.println("</script>");
+    script.close();
+    return;
+  }
+%>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.jsp">강의평가 웹사이트</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
@@ -31,9 +40,19 @@
             회원관리
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdown">
+            <%
+              if(userId==null){
+
+
+            %>
             <a class="dropdown-item" href="userLogin.jsp">로그인</a>
-            <a class="dropdown-item active" href="userJoin.jsp">회원가입</a>
+            <a class="dropdown-item" href="userJoin.jsp">회원가입</a>
+            <%
+            } else {
+            %>
             <a class="dropdown-item" href="userLogout.jsp">로그아웃</a>
+            <% }
+            %>
           </div>
         </li>
       </ul>
