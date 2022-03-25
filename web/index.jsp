@@ -23,7 +23,7 @@
   if(session.getAttribute("userId")!=null){
     userId= (String) session.getAttribute("userId");
   }
-  if(session.getAttribute("userId")!=null){
+  if(userId==null){
     PrintWriter script = response.getWriter();
     script.println("<script>");
     script.println("alert('로그인을 해주세요.');");

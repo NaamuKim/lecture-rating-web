@@ -13,6 +13,18 @@
 <%
     request.setCharacterEncoding("UTF-8");
     String userId=null;
+    if(session.getAttribute("userId")!=null){
+        userId= (String) session.getAttribute("userId");
+    }
+    if(session.getAttribute("userId")!=null){
+        PrintWriter script = response.getWriter();
+        script.println("<script>");
+        script.println("alert('로그인을 해주세요.');");
+        script.println("location.href='userLogin.jsp'");
+        script.println("</script>");
+        script.close();
+        return;
+    }
     String userPassword=null;
     String userEmail=null;
     if(request.getParameter("userId")!=null){
