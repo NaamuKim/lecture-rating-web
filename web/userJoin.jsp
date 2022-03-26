@@ -24,6 +24,7 @@
     script.close();
     return;
   }
+
 %>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.jsp">강의평가 웹사이트</a>

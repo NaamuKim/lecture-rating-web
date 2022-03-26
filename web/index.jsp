@@ -151,7 +151,7 @@
                   <option value="2019">2019</option>
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
-                  <option value="2022">2022</option>
+                  <option value="2022" selected>2022</option>
                   <option value="2023">2023</option>
                   <option value="2024">2024</option>
                 </select>
@@ -160,23 +160,23 @@
                 <label>수강 학기</label>
                 <select name="semesterDivide" class="form-control">
                   <option value="1학기" selected>1학기</option>
-                  <option value="여름학기" selected>여름학기</option>
-                  <option value="2학기" selected>2학기</option>
-                  <option value="겨울학기" selected>겨울학기</option>
+                  <option value="여름학기" >여름학기</option>
+                  <option value="2학기" >2학기</option>
+                  <option value="겨울학기" >겨울학기</option>
                 </select>
               </div>
               <div class="form-group col-sm-4">
                 <label>강의 구분</label>
                 <select name="lectureDivide" class="form-control">
                   <option value="전공" selected>전공</option>
-                  <option value="교양" selected>교양</option>
-                  <option value="기타" selected>기타</option>
+                  <option value="교양" >교양</option>
+                  <option value="기타" >기타</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
               <label>제목</label>
-              <input type="text" name="evaluationTime" class="form-control" maxlength="30">
+              <input type="text" name="evaluationTitle" class="form-control" maxlength="30">
             </div>
             <div class="form-group">
               <label>내용</label>
@@ -195,7 +195,7 @@
               </div>
               <div class="form-group col-sm-3">
                 <label>성적</label>
-                <select name="totalScore" class="form-control">
+                <select name="creditScore" class="form-control">
                   <option value="A" selected>A</option>
                   <option value="B">B</option>
                   <option value="C">C</option>
@@ -205,7 +205,7 @@
               </div>
               <div class="form-group col-sm-3">
                 <label>널널</label>
-                <select name="totalScore" class="form-control">
+                <select name="comfortableScore" class="form-control">
                   <option value="A" selected>A</option>
                   <option value="B">B</option>
                   <option value="C">C</option>
@@ -215,12 +215,12 @@
               </div>
               <div class="form-group col-sm-3">
                 <label>강의</label>
-                <select name="totalScore" class="form-control">
+                <select name="lectureScore" class="form-control">
                   <option value="A" selected>A</option>
-                  <option value="B" selected>B</option>
-                  <option value="C" selected>C</option>
-                  <option value="D" selected>D</option>
-                  <option value="F" selected>F</option>
+                  <option value="B" >B</option>
+                  <option value="C" >C</option>
+                  <option value="D" >D</option>
+                  <option value="F" >F</option>
                 </select>
               </div>
             </div>
